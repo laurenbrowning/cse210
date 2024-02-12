@@ -15,9 +15,9 @@ public class GoalManager : Goal
     }
     public void SaveGoals()
     {
-        string fileName = "";
+        
         Console.Write("What is the filename? ");
-        fileName = Console.ReadLine();
+        string fileName = Console.ReadLine();
 
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
@@ -35,9 +35,9 @@ public class GoalManager : Goal
     {
         _goals.Clear(); 
 
-        string fileName = "";
+        
         Console.Write("What is the filename? ");
-        fileName = Console.ReadLine();
+        string fileName = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(fileName);
 
         _accumulatedPoints = Convert.ToInt32(lines[0]);
@@ -96,9 +96,9 @@ public class GoalManager : Goal
 
     public void RecordEventInTracker()
     {
-        string goalIndex = "";
+    
         Console.Write("Which goal did you accomplish? ");
-        goalIndex = Console.ReadLine();
+        string goalIndex = Console.ReadLine();
         int goalIndexInt = Convert.ToInt32(goalIndex) - 1;
 
         if (_goals[goalIndexInt].IsComplete() == false) {
