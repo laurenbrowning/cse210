@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 public class GoalManager : Goal
 {
@@ -16,8 +17,7 @@ public class GoalManager : Goal
     public void SaveGoals()
     {
         
-        Console.Write("What is the filename? ");
-        string fileName = Console.ReadLine();
+        string fileName = "goallist.txt";
 
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
@@ -36,8 +36,7 @@ public class GoalManager : Goal
         _goals.Clear(); 
 
         
-        Console.Write("What is the filename? ");
-        string fileName = Console.ReadLine();
+        string fileName = "goallist.txt";
         string[] lines = System.IO.File.ReadAllLines(fileName);
 
         _accumulatedPoints = Convert.ToInt32(lines[0]);
