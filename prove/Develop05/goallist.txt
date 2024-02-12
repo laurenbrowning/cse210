@@ -1,0 +1,2 @@
+0
+ChecklistGoal:go to temple,attend any temple session 3 times,20,100,4,0
